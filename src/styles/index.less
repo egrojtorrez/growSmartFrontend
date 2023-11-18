@@ -1,0 +1,130 @@
+@import "rsuite/styles/index.less";
+
+@import "../components/layout/Frame/styles.less";
+@import "../components/layout/Logo/styles.less";
+@import "../components/layout/Header/styles.less";
+
+//rewrite base color
+@base-color: #34c3ff;
+
+body {
+  background: #ffffff
+}
+
+.text-muted {
+  color: @B700;
+}
+
+
+
+.rs-sidebar {
+  position: fixed;
+  height: 100vh;
+  z-index: 3;
+}
+
+.page-container {
+  padding-left: 260px;
+  transition: padding 0.5s;
+  &.container-full {
+    padding-left: 60px;
+  }
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(87deg, #fb6340 0, #fbb140 100%);
+}
+
+.bg-gradient-red {
+  background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+}
+
+// CUSTOM STYLES
+
+.m-default {
+  margin: 10px 0 10px 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-bold {
+  font-weight: bold;
+}
+
+.contenedorMensajes {
+  border: 1px solid #e5e5ea;
+  border-radius: 10px;
+  padding: 5px;
+  display: inline-block;
+  max-height: 30em;
+  overflow-x: auto;
+  width: 100%;
+}
+.contenedorMensajeVacio {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.span-center {
+  justify-content: center;
+  display: flex;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mensaje {
+  display: inline-block;
+  border: 1px solid #a6a6a6;
+  padding: 5px;
+  margin: 5px;
+  max-width: 70%;
+  min-width: 50%;
+  word-break: break-all;
+  border-radius: 10px 10px 10px 0;
+  box-shadow: black 2px 3px 10px -7px;
+}
+
+.miMensaje {
+  background: #1675e0;
+  float: right;
+  border-radius: 10px 10px 0 10px;
+  color: white;
+}
+
+@media only screen and (min-width: 640px) {
+  .publicaciones {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .publicaciones {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1044px) {
+  .publicaciones {
+    width: 80%;
+  }
+}
+
+.btnComentarios {
+  font-size: 1em;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #00000030;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+
