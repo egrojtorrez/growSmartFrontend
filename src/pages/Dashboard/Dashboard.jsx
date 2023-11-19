@@ -56,11 +56,11 @@ const data = [
 
 function Dispositivo() {
   return (
-    <Panel shaded>
+    <Panel header={<h4>Planta1</h4>} shaded>
       <Stack justifyContent="space-around">
         <Stack direction="column" spacing={5}>
-          <h6>Temperatura</h6>
-          <h5>22°C</h5>
+          <h3>Temperatura</h3>
+          <h3>22°C</h3>
         </Stack>
         <Stack direction="column">
           <LineChart

@@ -5,9 +5,8 @@ export async function actionLogin({ request }) {
   const infoForm = await request.formData();
   const datosForm = Object.fromEntries(infoForm);
 
-  console.log(datosForm);
-
   Cookies.set("JWT", "TOKEN:29873491282");
+  Cookies.set("user", JSON.stringify({ user: datosForm.identifier }));
 
   location.reload();
   return null;

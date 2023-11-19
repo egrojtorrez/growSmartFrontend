@@ -54,7 +54,7 @@ export default function AppSidebar() {
         className="sideVisible"
       >
         <Sidenav.Header>
-          <Brand />
+          <Brand sidebarShow={sidebarShow} />
         </Sidenav.Header>
         <Sidenav
           expanded={sidebarShow}
