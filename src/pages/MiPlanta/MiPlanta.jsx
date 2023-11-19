@@ -16,9 +16,7 @@ import { Stack } from "rsuite";
 export default function MiPlanta() {
   return (
     <>
-      <PanelGroup>
-        <UpperPanel />
-      </PanelGroup>
+      <UpperPanel />
       <LowerPanel />
     </>
   );
@@ -114,6 +112,7 @@ const UpperPanel = () => {
 const LowerPanel = () => {
   return (
     <>
+      <Panel shaded>
       <Stack justifyContent="center" style={{ marginTop: 25 }}>
         <Stack direction="column" spacing={4}>
           <HumedadMaxima />
@@ -131,6 +130,7 @@ const LowerPanel = () => {
       <Stack justifyContent="center" style={{ marginTop: 50 }}>
         <Dispositivo />
       </Stack>
+      </Panel>
     </>
   );
 };
