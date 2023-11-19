@@ -4,23 +4,12 @@ import { Button, Panel, Stack, Input, InputGroup, Divider } from "rsuite";
 
 // import Brand from "@components/layout/Sidebar/Brand";
 
-import { useActionData, Form } from "react-router-dom";
-import { useEffect } from "react";
-import { useToast } from "@hooks/useToast";
-import { MessageError } from "@components/Notifications/MessageNotification";
+import { Form } from "react-router-dom";
+
 import BrandLogin from "./BrandLogin";
 import { FaSeedling } from "react-icons/fa";
 
 export default function Login() {
-  const { notify } = useToast();
-  const action = useActionData();
-
-  useEffect(() => {
-    if (action?.message) {
-      notify(<MessageError text={action.message} />);
-    }
-  }, [action]);
-
   return (
     <>
       <Stack
