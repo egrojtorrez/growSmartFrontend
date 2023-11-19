@@ -1,18 +1,7 @@
-import {
-  Dropdown,
-  Popover,
-  Whisper,
-  Stack,
-  Badge,
-  Avatar,
-  IconButton,
-  List,
-  Button,
-} from "rsuite";
+import { Dropdown, Popover, Whisper, Stack, Avatar } from "rsuite";
 
 import { useRef } from "react";
 import user from "@helpers/user";
-import HelpOutlineIcon from "@rsuite/icons/HelpOutline";
 import { logout } from "@helpers/logout";
 
 const renderAdminSpeaker = ({ onClose, left, top, className }, ref) => {
@@ -28,22 +17,8 @@ const renderAdminSpeaker = ({ onClose, left, top, className }, ref) => {
           <strong>{user.user}</strong>
         </Dropdown.Item>
         <Dropdown.Separator />
-        <Dropdown.Item
-          onClick={() => {
-            console.log(user);
-          }}
-        >
-          Settings
-        </Dropdown.Item>
+        <Dropdown.Item>Settings</Dropdown.Item>
         <Dropdown.Item onClick={logout}>Cerrar Sesion</Dropdown.Item>
-        <Dropdown.Item
-          icon={<HelpOutlineIcon />}
-          href="https://rsuitejs.com"
-          target="_blank"
-          as="a"
-        >
-          Help{" "}
-        </Dropdown.Item>
       </Dropdown.Menu>
     </Popover>
   );

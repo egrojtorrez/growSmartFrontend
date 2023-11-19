@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { useSideBar } from "@hooks/useSideBar";
 import AppHeader from "../Header";
 import AppSidebar from "../Sidebar/AppSidebar";
-import AppFooter from "../AppFooter";
 import { useEffect, useState } from "react";
 
 const Frame = () => {
@@ -28,7 +27,6 @@ const Frame = () => {
         <Content>
           <Outlet />
         </Content>
-        <AppFooter />
       </Container>
     </Container>
   );
