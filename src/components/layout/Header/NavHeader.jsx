@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Navbar, Nav } from "rsuite";
 import MenuIcon from "@rsuite/icons/Menu";
 import AppHeader from "./AppHeader";
@@ -11,7 +10,7 @@ export default function NavHeader() {
     <>
       <Navbar>
         <Nav>
-          <Nav.Item onClick={toggleSidebar} icon={<MenuIcon />} />
+          <Nav.Item onClick={toggleSidebar} icon={<MenuIcon />}/>
         </Nav>
       </Navbar>
       <AppHeader />
