@@ -8,7 +8,7 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-import { Panel } from "rsuite";
+import { Panel, PanelGroup } from "rsuite";
 import { Button, ButtonGroup } from "rsuite";
 import { Progress, Row, Col } from "rsuite";
 import { Stack } from "rsuite";
