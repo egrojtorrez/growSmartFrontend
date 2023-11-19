@@ -237,7 +237,7 @@ const TemperaturaMaxima = () => {
       <label
         style={{
           fontSize: 48,
-          marginLeft: 80,
+          marginLeft: 155,
           marginTop: 128,
           paddingBottom: 40,
           display: "block",
@@ -258,7 +258,7 @@ const TemperaturaMinima = () => {
       <label
         style={{
           fontSize: 48,
-          marginLeft: 80,
+          marginLeft: 125,
           marginTop: 128,
           paddingBottom: 40,
           display: "block",
