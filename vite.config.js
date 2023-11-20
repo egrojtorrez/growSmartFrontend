@@ -4,6 +4,7 @@ import path from 'node:path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/growSmartFrontend/',
   resolve: {
     alias: {
       '@src': path.resolve(__dirname, 'src'),
@@ -16,6 +17,5 @@ export default defineConfig({
       '@config': path.resolve(__dirname, 'src/config'),
       '@helpers': path.resolve(__dirname, 'src/helpers'),
     }
-  }
-  
+  },
 })
