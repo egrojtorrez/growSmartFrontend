@@ -14,43 +14,48 @@ import Dashboard from "@pages/Dashboard/Dashboard";
 import MiPlanta from "@pages/MiPlanta/MiPlanta";
 import AgregarPlanta from "@pages/AgregarPlanta/AgregarPlanta";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      index: true,
+      element: <Navigate to="/app" />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+      action: actionLogin,
+      loader: loaderLogin,
+    },
+    {
+      path: "/app",
+      element: (
+        <LoginProtected>
+          <SidebarProvider>
+            <Layout />
+          </SidebarProvider>
+        </LoginProtected>
+      ),
+      children: [
+        {
+          index: true,
+          element: <Dashboard />,
+        },
+        {
+          path: "dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "mi-planta",
+          element: <MiPlanta />,
+        },
+        {
+          path: "agregar-planta",
+          element: <AgregarPlanta />,
+        },
+      ],
+    },
+  ],
   {
-    index: true,
-    element: <Navigate to="/app" />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-    action: actionLogin,
-    loader: loaderLogin,
-  },
-  {
-    path: "/app",
-    element: (
-      <LoginProtected>
-        <SidebarProvider>
-          <Layout />
-        </SidebarProvider>
-      </LoginProtected>
-    ),
-    children: [
-      {
-        index: true,
-        element: <Dashboard />,
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "mi-planta",
-        element: <MiPlanta />,
-      },
-      {
-        path: "agregar-planta",
-        element: <AgregarPlanta />,
-      },
-    ],
-  },
-]);
+    basename: "/growSmartFrontend/",
+  }
+);

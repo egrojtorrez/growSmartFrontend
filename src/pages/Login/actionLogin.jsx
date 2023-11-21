@@ -7,7 +7,7 @@ export async function actionLogin({ request }) {
 
   Cookies.set("JWT", "TOKEN:29873491282");
   Cookies.set("user", JSON.stringify({ user: datosForm.identifier }));
-
+  window.location.href = "app";
   location.reload();
   return null;
 }
